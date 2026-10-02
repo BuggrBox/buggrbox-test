@@ -1,0 +1,17 @@
+{
+  "name": "buggrbox",
+  "displayName": "BuggrBox",
+  "version": "0.1.0",
+  "description": "Gives Claude physical access to embedded prototypes through a BuggrBox: DUT power and current, GPIO, UART, I2C, SWD debug and recovery. Includes the MCP server and a setup skill.",
+  "author": { "name": "BuggrBox" },
+  "homepage": "https://buggrbox.com",
+  "keywords": ["embedded", "hardware", "bench", "debug", "esp32", "swd", "mcp"],
+  "userConfig": {
+    "serial": {
+      "type": "string",
+      "title": "Box serial number (only with several boxes)",
+      "description": "Leave empty with one BuggrBox. With several, the MAC address of the one to use, e.g. AA:BB:CC:11:22:33 (adapter_status and device_info show it).",
+      "default": ""
+    }
+  }
+}

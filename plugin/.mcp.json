@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "buggrbox": {
+      "command": "uv",
+      "args": ["run", "--quiet", "--script", "${CLAUDE_PLUGIN_ROOT}/host/buggr_mcp.py"],
+      "env": { "BUGGR_SERIAL": "${user_config.serial}" }
+    }
+  }
+}

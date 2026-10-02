@@ -1,0 +1,25 @@
+# The BuggrBox MCP adapter as a package, so a user runs it without a clone or a Python setup:
+#   uvx --from <this directory, or a git URL with #subdirectory=plugin/host> buggrbox-mcp
+# The plugin runs the module with `uv run --script` (its inline metadata); this file serves the
+# `uvx --from` route, for users who register the server by hand.
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "buggrbox-mcp"
+dynamic = ["version"]
+description = "MCP server for the BuggrBox bench instrument; every tool is generated from the box's device.info"
+requires-python = ">=3.9"
+dependencies = ["pyserial>=3.5"]
+
+[project.scripts]
+buggrbox-mcp = "buggr_mcp:main"
+
+[tool.setuptools]
+py-modules = ["buggr_mcp"]
+
+[tool.setuptools.dynamic]
+version = { attr = "buggr_mcp.__version__" }
+

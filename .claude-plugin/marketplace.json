@@ -1,0 +1,12 @@
+{
+  "name": "buggrbox",
+  "description": "The BuggrBox plugin: an MCP server that gives Claude physical access to embedded prototypes, and a setup skill.",
+  "owner": { "name": "BuggrBox", "url": "https://buggrbox.com" },
+  "plugins": [
+    {
+      "name": "buggrbox",
+      "source": "./plugin",
+      "description": "MCP server and setup skill for the BuggrBox bench instrument."
+    }
+  ]
+}
